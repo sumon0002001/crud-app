@@ -14,7 +14,7 @@ function App() {
       <Route exact path="/" element={<Home />} />
       <Route exact path="/all" element={<Allusers />} />
       <Route exact path="/add" element={<Addusers />} />
-      <Route  element={<NotFound />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>
   );
