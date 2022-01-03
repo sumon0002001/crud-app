@@ -1,0 +1,12 @@
+{
+  "users": [
+    {
+      "name": "Sumon",
+      "country": "Bangladesh",
+      "phone": "01223445",
+      "email": "sumon@gmail.com",
+      "id": 1
+
+    }
+  ]
+}
