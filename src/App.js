@@ -1,22 +1,31 @@
-import Addusers from './Components/Addusers';
-import Allusers from './Components/Allusers';
-import Home from './Components/Home';
-import Navbar from './Components/NavBar';
-import NotFound from './Components/NotFound';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
+import Navbar from './components/Navbar';
+import AllUsers from './components/AllUsers';
+import AddUser from './components/AddUser';
+import EditClient from './components/EditClient';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+ 
+} from "react-router-dom";
+import NotFound from './components/NotFound';
 
 
 function App() {
   return (
-    <BrowserRouter>
-    <Navbar />
-    <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route exact path="/all" element={<Allusers />} />
-      <Route exact path="/add" element={<Addusers />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-  </BrowserRouter>
+    <Router>
+      <Navbar />
+        <Switch >
+          <Route exact path="/" component={Dashboard} />
+          <Route exact path="/all" component={AllUsers} />
+          <Route exact path="/add" component={AddUser} />
+          <Route exact path = "/edit/:id" component = {EditClient} />
+          <Route component={NotFound} />
+        </Switch>
+       
+    </Router>
+   
   );
 }
 
